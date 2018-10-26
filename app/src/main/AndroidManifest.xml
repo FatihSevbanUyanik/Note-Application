@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.fatihpc.notitceapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="Note Holder"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CategoryActivity.CategoryActivity" />
+        <activity android:name=".NoteActivity.NoteActivity"></activity>
+
+        <provider
+            android:authorities="com.example.fatihpc.notitceapplication.SQLDatabase.DataProvider"
+            android:name=".SQLDatabase.DataProvider" />
+
+        <service android:name=".CategoryActivity.MyCategoryIntentService"/>
+        <service android:name=".MainActivity.MyNoteIntentService"/>
+
+
+    </application>
+
+</manifest>
